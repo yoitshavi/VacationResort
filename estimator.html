@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Tavern</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <h1>Overnight Estimator</h1>
+    <nav class="navl">
+        <div class="nav-links-container">
+          <a href="./overnight.html" class="nav__link">
+            <span class="nav__text">Book Your Stay</span>
+          </a>
+          <a href="./activity.html" class="nav__link">
+            <span class="nav__text">Activities</span>
+          </a>
+          <a href="./dining.html" class="nav__link">
+            <span class="nav__text">Dining Experience</span>
+          </a>
+        </div>
+      </nav>
+    <div class="row mx-auto">
+        <div class="col">
+    <p>Name: </p><p><input type="text" value="" id="name" required/></p>
+    <p>Email:</p><p><input type="text" value="" id="email" required/></p>
+    <p>Check In:</p><p><input type="date" id="checkIn" required/></p>
+    <p>Days Staying:</p><p><input type="number" id="daysStaying" value="0" min="1" max="28" required/></p>
+    
+    <fieldset>
+        <legend>Room Type:</legend>
+        <input type="radio" name="bedForm" id="queenBed"
+        value="Queen" checked> 1 Queen Bed<br>
+        <input type="radio" name="bedForm" id="kingBed"
+        value="King"> 1 King Bed <br>
+        <input type="radio" name="bedForm" id="twinBed"
+        value="Twin"> 2 Twin Beds <br>
+       </fieldset><br>
+    
+    <p>Number of Adults:</p><p><input type="number" id="adultsNumber" /></p>
+    <p>Number of Children:</p><p><input type="number" id="childrenNumber" /></p>
+    
+    <legend>Dicounts?</legend>
+        <input type="radio" name="discount" id="noDiscount"
+        value="None" checked> None <br>
+        <input type="radio" name="discount" id="aaaAndSeniorDiscount"
+        value="Senior"> AAA/Senior 10% <br>
+        <input type="radio" name="discount" id="militaryDiscount"
+        value="Military"> Military 20% <br>
+       </fieldset><br>
+
+       <input type="submit" id="submitBtn"/><hr>
+       <p>Room Cost:</p><p><input type="number" id="roomTotal" readonly/></p>
+       <p>Discount:</p><p><input type="number" id="discountTotal"readonly /></p>
+       <p>Tax:</p><p><input type="number" id="taxTotal" readonly/></p>
+       <p>Total Due Today:</p><p><input type="number" id="totalDue" readonly/></p>
+    </div>
+    </div>
+       <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/index.js" ></script>
+  </body>
+</html>
